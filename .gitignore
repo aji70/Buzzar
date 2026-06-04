@@ -1,0 +1,27 @@
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Environment & secrets (repo root)
+.env
+.env.*
+!.env.example
+
+# IDE / editor / local AI
+.claude/
+.cursor/
+.idea/
+.vscode/
+*.swp
+*~
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Optional: keep design sources local if you copy them into frontend/public/
+# bee1.png
+# buzar.jpeg
