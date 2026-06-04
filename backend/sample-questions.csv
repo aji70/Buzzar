@@ -1,0 +1,5 @@
+type,question,answer,answerOptions,imageUrl,hint
+multichoice,What is the capital of France?,Paris,"{""option_a"":""London"",""option_b"":""Paris"",""option_c"":""Berlin"",""option_d"":""Madrid""}",https://example.com/france.jpg,It's known as the City of Light
+true_or_false,The Earth is flat,false,,,Think about science
+input,What is 2 + 2?,4,,Basic arithmetic
+multichoice,Which programming language is known for web development?,JavaScript,"{""option_a"":""Python"",""option_b"":""JavaScript"",""option_c"":""C++"",""option_d"":""Assembly""}",

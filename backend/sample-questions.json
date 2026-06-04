@@ -1,0 +1,40 @@
+{
+  "questions": [
+    {
+      "type": "multichoice",
+      "question": "What is the capital of France?",
+      "answer": "Paris",
+      "answerOptions": {
+        "option_a": "London",
+        "option_b": "Paris",
+        "option_c": "Berlin",
+        "option_d": "Madrid"
+      },
+      "imageUrl": "https://example.com/france.jpg",
+      "hint": "It's known as the City of Light"
+    },
+    {
+      "type": "true_or_false",
+      "question": "The Earth is flat",
+      "answer": "false",
+      "hint": "Think about science"
+    },
+    {
+      "type": "input",
+      "question": "What is 2 + 2?",
+      "answer": "4",
+      "hint": "Basic arithmetic"
+    },
+    {
+      "type": "multichoice",
+      "question": "Which programming language is known for web development?",
+      "answer": "JavaScript",
+      "answerOptions": {
+        "option_a": "Python",
+        "option_b": "JavaScript",
+        "option_c": "C++",
+        "option_d": "Assembly"
+      }
+    }
+  ]
+}
