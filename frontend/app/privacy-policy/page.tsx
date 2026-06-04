@@ -7,7 +7,7 @@ export default function PrivacyPolicy() {
     <div className="min-h-screen w-full flex flex-col bg-gradient-to-b from-[#2a1810] via-[#1a1008] to-[#0f0905]">
       <div className="mx-auto w-full max-w-[560px] flex flex-col min-h-screen bg-gradient-to-b from-[#2a1810] via-[#1a1008] to-[#0f0905] relative">
         {/* HEADER */}
-        <header className="wooden-carved rounded-b-2xl mx-2 mt-2 px-4 py-3 flex justify-between items-center border-b-4 border-orange-600 sticky top-0 z-50">
+        <header className="wooden-carved rounded-b-2xl mx-2 mt-2 px-4 py-3 flex justify-between items-center border-b-4 border-[#4a2005] sticky top-0 z-50">
           <div className="flex items-center gap-2">
             <span className="text-3xl animate-float">🐝</span>
             <h1 className="title-glow text-2xl" style={{ fontSize: '1.5rem' }}>
@@ -26,7 +26,7 @@ export default function PrivacyPolicy() {
               Privacy Policy
             </h2>
 
-            <div className="wooden-carved rounded-lg p-4 border-2 border-amber-600 space-y-4 text-sm text-amber-100">
+            <div className="wooden-carved rounded-lg p-4 border-2 border-[#4a2005] space-y-4 text-sm text-amber-100">
               <div>
                 <h3 className="font-black text-amber-300 mb-2 text-base">Introduction</h3>
                 <p className="leading-relaxed">
@@ -79,7 +79,7 @@ export default function PrivacyPolicy() {
                 </p>
               </div>
 
-              <div className="pt-4 border-t border-amber-700">
+              <div className="pt-4 border-t border-[#3a1804]">
                 <p className="text-xs text-amber-300 font-semibold">
                   Last updated: June 2024
                 </p>
@@ -88,16 +88,16 @@ export default function PrivacyPolicy() {
 
             {/* Navigation Links */}
             <div className="mt-6 space-y-2">
-              <Link href="/disclaimer" className="block wooden-carved rounded-lg p-3 text-center text-amber-300 font-bold hover:bg-amber-900/20 transition border-2 border-amber-600">
+              <Link href="/disclaimer" className="block wooden-carved rounded-lg p-3 text-center text-amber-300 font-bold hover:bg-amber-900/20 transition border-2 border-[#4a2005]">
                 Disclaimer
               </Link>
-              <Link href="/terms-and-conditions" className="block wooden-carved rounded-lg p-3 text-center text-amber-300 font-bold hover:bg-amber-900/20 transition border-2 border-amber-600">
+              <Link href="/terms-and-conditions" className="block wooden-carved rounded-lg p-3 text-center text-amber-300 font-bold hover:bg-amber-900/20 transition border-2 border-[#4a2005]">
                 Terms & Conditions
               </Link>
-              <Link href="/contact-us" className="block wooden-carved rounded-lg p-3 text-center text-amber-300 font-bold hover:bg-amber-900/20 transition border-2 border-amber-600">
+              <Link href="/contact-us" className="block wooden-carved rounded-lg p-3 text-center text-amber-300 font-bold hover:bg-amber-900/20 transition border-2 border-[#4a2005]">
                 Contact Us
               </Link>
-              <Link href="/" className="block wooden-carved rounded-lg p-3 text-center text-orange-400 font-bold hover:bg-orange-900/20 transition border-2 border-orange-600">
+              <Link href="/" className="block wooden-carved rounded-lg p-3 text-center text-orange-400 font-bold hover:bg-orange-900/20 transition border-2 border-[#4a2005]">
                 ← Back to Home
               </Link>
             </div>

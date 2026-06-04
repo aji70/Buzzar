@@ -30,7 +30,7 @@ export default function ContactUs() {
     <div className="min-h-screen w-full flex flex-col bg-gradient-to-b from-[#2a1810] via-[#1a1008] to-[#0f0905]">
       <div className="mx-auto w-full max-w-[560px] flex flex-col min-h-screen bg-gradient-to-b from-[#2a1810] via-[#1a1008] to-[#0f0905] relative">
         {/* HEADER */}
-        <header className="wooden-carved rounded-b-2xl mx-2 mt-2 px-4 py-3 flex justify-between items-center border-b-4 border-orange-600 sticky top-0 z-50">
+        <header className="wooden-carved rounded-b-2xl mx-2 mt-2 px-4 py-3 flex justify-between items-center border-b-4 border-[#4a2005] sticky top-0 z-50">
           <div className="flex items-center gap-2">
             <span className="text-3xl animate-float">🐝</span>
             <h1 className="title-glow text-2xl" style={{ fontSize: '1.5rem' }}>
@@ -53,7 +53,7 @@ export default function ContactUs() {
             </p>
 
             {/* Contact Info */}
-            <div className="wooden-carved rounded-lg p-4 border-2 border-amber-600 mb-4 space-y-3">
+            <div className="wooden-carved rounded-lg p-4 border-2 border-[#4a2005] mb-4 space-y-3">
               <div>
                 <p className="text-xs text-amber-300 font-bold mb-1">📧 Email</p>
                 <p className="text-sm text-amber-100">support@buzzar.com</p>
@@ -69,7 +69,7 @@ export default function ContactUs() {
             </div>
 
             {/* Contact Form */}
-            <div className="wooden-carved rounded-lg p-4 border-2 border-amber-600 mb-4">
+            <div className="wooden-carved rounded-lg p-4 border-2 border-[#4a2005] mb-4">
               <h3 className="font-black text-amber-300 mb-4 text-base">Send us a Message</h3>
 
               {submitted && (
@@ -87,7 +87,7 @@ export default function ContactUs() {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full bg-amber-900/20 border border-amber-600 rounded px-3 py-2 text-amber-100 placeholder-amber-700 focus:outline-none focus:border-amber-400 text-sm"
+                    className="w-full bg-amber-900/20 border border-[#4a2005] rounded px-3 py-2 text-amber-100 placeholder-amber-700 focus:outline-none focus:border-[#6b3010] text-sm"
                     placeholder="Your name"
                   />
                 </div>
@@ -100,7 +100,7 @@ export default function ContactUs() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full bg-amber-900/20 border border-amber-600 rounded px-3 py-2 text-amber-100 placeholder-amber-700 focus:outline-none focus:border-amber-400 text-sm"
+                    className="w-full bg-amber-900/20 border border-[#4a2005] rounded px-3 py-2 text-amber-100 placeholder-amber-700 focus:outline-none focus:border-[#6b3010] text-sm"
                     placeholder="your@email.com"
                   />
                 </div>
@@ -112,7 +112,7 @@ export default function ContactUs() {
                     value={formData.subject}
                     onChange={handleChange}
                     required
-                    className="w-full bg-amber-900/20 border border-amber-600 rounded px-3 py-2 text-amber-100 focus:outline-none focus:border-amber-400 text-sm"
+                    className="w-full bg-amber-900/20 border border-[#4a2005] rounded px-3 py-2 text-amber-100 focus:outline-none focus:border-[#6b3010] text-sm"
                   >
                     <option value="">Select a subject</option>
                     <option value="bug">🐛 Bug Report</option>
@@ -131,7 +131,7 @@ export default function ContactUs() {
                     onChange={handleChange}
                     required
                     rows={4}
-                    className="w-full bg-amber-900/20 border border-amber-600 rounded px-3 py-2 text-amber-100 placeholder-amber-700 focus:outline-none focus:border-amber-400 text-sm resize-none"
+                    className="w-full bg-amber-900/20 border border-[#4a2005] rounded px-3 py-2 text-amber-100 placeholder-amber-700 focus:outline-none focus:border-[#6b3010] text-sm resize-none"
                     placeholder="Your message..."
                   />
                 </div>
@@ -146,7 +146,7 @@ export default function ContactUs() {
             </div>
 
             {/* FAQ */}
-            <div className="wooden-carved rounded-lg p-4 border-2 border-amber-600 mb-4">
+            <div className="wooden-carved rounded-lg p-4 border-2 border-[#4a2005] mb-4">
               <h3 className="font-black text-amber-300 mb-3 text-base">❓ Quick FAQ</h3>
               <div className="space-y-3 text-sm">
                 <div>
@@ -165,7 +165,7 @@ export default function ContactUs() {
             </div>
 
             {/* Social Links */}
-            <div className="wooden-carved rounded-lg p-4 border-2 border-amber-600 text-center mb-4">
+            <div className="wooden-carved rounded-lg p-4 border-2 border-[#4a2005] text-center mb-4">
               <p className="text-amber-300 font-bold text-sm mb-3">Follow BUZZAR on Social Media</p>
               <div className="flex justify-center gap-4">
                 <a href="#" className="text-2xl hover:scale-110 transition-transform" title="Twitter">🐦</a>
@@ -178,16 +178,16 @@ export default function ContactUs() {
 
             {/* Navigation Links */}
             <div className="mt-4 space-y-2">
-              <Link href="/disclaimer" className="block wooden-carved rounded-lg p-3 text-center text-amber-300 font-bold hover:bg-amber-900/20 transition border-2 border-amber-600">
+              <Link href="/disclaimer" className="block wooden-carved rounded-lg p-3 text-center text-amber-300 font-bold hover:bg-amber-900/20 transition border-2 border-[#4a2005]">
                 Disclaimer
               </Link>
-              <Link href="/privacy-policy" className="block wooden-carved rounded-lg p-3 text-center text-amber-300 font-bold hover:bg-amber-900/20 transition border-2 border-amber-600">
+              <Link href="/privacy-policy" className="block wooden-carved rounded-lg p-3 text-center text-amber-300 font-bold hover:bg-amber-900/20 transition border-2 border-[#4a2005]">
                 Privacy Policy
               </Link>
-              <Link href="/terms-and-conditions" className="block wooden-carved rounded-lg p-3 text-center text-amber-300 font-bold hover:bg-amber-900/20 transition border-2 border-amber-600">
+              <Link href="/terms-and-conditions" className="block wooden-carved rounded-lg p-3 text-center text-amber-300 font-bold hover:bg-amber-900/20 transition border-2 border-[#4a2005]">
                 Terms & Conditions
               </Link>
-              <Link href="/" className="block wooden-carved rounded-lg p-3 text-center text-orange-400 font-bold hover:bg-orange-900/20 transition border-2 border-orange-600">
+              <Link href="/" className="block wooden-carved rounded-lg p-3 text-center text-orange-400 font-bold hover:bg-orange-900/20 transition border-2 border-[#4a2005]">
                 ← Back to Home
               </Link>
             </div>
