@@ -71,7 +71,16 @@ export default function Home() {
         <header className="header-nav rounded-b-2xl mx-2 mt-2 px-4 py-3 flex justify-between items-center sticky top-0 z-50">
           {/* Logo & Mascot */}
           <div className="flex items-center gap-2">
-            <span className="text-3xl animate-float">🐝</span>
+            <img
+              src="/assets/bee_happy_bucket.png"
+              alt="Buzzar bee"
+              style={{
+                height: '36px',
+                width: 'auto',
+                objectFit: 'contain',
+                filter: 'drop-shadow(0 2px 4px rgba(245,158,11,0.3))',
+              }}
+            />
             <h1 className="header-logo text-2xl" style={{ fontSize: '1.5rem' }}>
               BUZZAR
             </h1>
@@ -225,25 +234,35 @@ export default function Home() {
         <main className="app-main themed-scrollbar flex-1 min-h-0 overflow-y-auto overscroll-contain">
           {/* INTRODUCTION SECTION */}
           <section className="mx-3 mt-4 wooden-carved rounded-xl p-5 border-4 border-orange-600 hero-card honeycomb-pattern relative overflow-visible">
-            <div className="text-center relative z-20">
-              <h2 className="hero-title mb-2" style={{ fontFamily: "'Fredoka One'" }}>
-                Welcome to BUZZAR! 🐝
-              </h2>
-              <p className="text-amber-100 text-sm leading-relaxed mb-3">
-                The ultimate gamified learning platform where knowledge is power and speed is everything!
-              </p>
-              <p className="text-amber-200 text-xs leading-relaxed">
-                Join thousands of players competing in real-time quiz battles. Answer questions correctly, climb the ranks from Worker Bee to Hive Master, and dominate the leaderboards!
-              </p>
+            <div style={{ position: 'relative', overflow: 'visible' }}>
+              <div className="text-center relative z-20">
+                <h2 className="hero-title mb-2" style={{ fontFamily: "'Fredoka One'" }}>
+                  Welcome to BUZZAR! 🐝
+                </h2>
+                <p className="text-amber-100 text-sm leading-relaxed mb-3">
+                  The ultimate gamified learning platform where knowledge is power and speed is everything!
+                </p>
+                <p className="text-amber-200 text-xs leading-relaxed">
+                  Join thousands of players competing in real-time quiz battles. Answer questions correctly, climb the ranks from Worker Bee to Hive Master, and dominate the leaderboards!
+                </p>
+              </div>
+              <img
+                src="/assets/bee_happy_bucket.png"
+                alt=""
+                style={{
+                  position: 'absolute',
+                  bottom: '-22px',
+                  right: '-8px',
+                  height: '85px',
+                  width: 'auto',
+                  objectFit: 'contain',
+                  filter: 'drop-shadow(0 4px 8px rgba(0,0,0,0.4))',
+                  animation: 'float 3s ease-in-out infinite',
+                  zIndex: 10,
+                  pointerEvents: 'none',
+                }}
+              />
             </div>
-            {/* Floating Bee */}
-            <img
-              src="/assets/bee_happy_bucket.png"
-              alt="Happy Bee"
-              className="hero-bee"
-              width={110}
-              height={110}
-            />
           </section>
 
           {/* QUICK STATS */}
@@ -278,7 +297,9 @@ export default function Home() {
                 <h4 className="game-card-title text-amber-300">HIVE MASTER</h4>
                 <p className="game-card-desc">Solo Progression Mode</p>
               </div>
-              <button className="btn-pill">PLAY</button>
+              <Link href="/hive-master/quiz" className="btn-pill game-card-action">
+                PLAY
+              </Link>
             </div>
 
             {/* HIVE ON FIRE */}
