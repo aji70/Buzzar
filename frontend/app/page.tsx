@@ -299,26 +299,55 @@ export default function Home() {
               </svg>
               Top Players
             </h3>
-            <div className="wooden-carved rounded-lg p-3 border-2 border-[#4a2005] leaderboard-card relative">
+
+            {/* PODIUM — Top 3 */}
+            <div className="flex items-end justify-center gap-2 mb-4 px-2">
+              {/* 2nd place */}
+              <div className="flex-1 flex flex-col items-center gap-1">
+                <span className="text-2xl">🥈</span>
+                <p className="text-amber-100 font-bold text-xs text-center truncate w-full text-center">HoneyLover92</p>
+                <p className="text-amber-400 font-bold text-xs">11,820</p>
+                <div className="w-full wooden-carved rounded-t-lg border-2 border-[#4a2005] flex items-center justify-center py-3" style={{ minHeight: '64px', boxShadow: 'inset 0 4px 12px rgba(0,0,0,0.5)' }}>
+                  <span className="text-2xl font-black text-stone-300">2</span>
+                </div>
+              </div>
+              {/* 1st place — tallest */}
+              <div className="flex-1 flex flex-col items-center gap-1">
+                <span className="text-2xl">👑</span>
+                <p className="text-amber-300 font-bold text-xs text-center truncate w-full text-center">BeeKeeper_Max</p>
+                <p className="text-amber-400 font-bold text-xs">12,450</p>
+                <div className="w-full wooden-carved rounded-t-lg border-2 border-[#4a2005] flex items-center justify-center py-5" style={{ minHeight: '96px', boxShadow: 'inset 0 4px 12px rgba(0,0,0,0.5)', background: 'linear-gradient(135deg, #5a3010 0%, #3a1c08 100%)' }}>
+                  <span className="text-3xl font-black text-amber-400">1</span>
+                </div>
+              </div>
+              {/* 3rd place */}
+              <div className="flex-1 flex flex-col items-center gap-1">
+                <span className="text-2xl">🥉</span>
+                <p className="text-amber-100 font-bold text-xs text-center truncate w-full text-center">SwarmMaster</p>
+                <p className="text-amber-400 font-bold text-xs">11,200</p>
+                <div className="w-full wooden-carved rounded-t-lg border-2 border-[#4a2005] flex items-center justify-center py-2" style={{ minHeight: '48px', boxShadow: 'inset 0 4px 12px rgba(0,0,0,0.5)' }}>
+                  <span className="text-xl font-black text-amber-700">3</span>
+                </div>
+              </div>
+            </div>
+
+            {/* LIST — #4 to #10 */}
+            <div className="wooden-carved rounded-lg border-2 border-[#4a2005]" style={{ boxShadow: 'inset 0 4px 12px rgba(0,0,0,0.5)' }}>
               {[
-                { rank: 1, name: 'BeeKeeper_Max', points: '12,450' },
-                { rank: 2, name: 'HoneyLover92', points: '11,820' },
-                { rank: 3, name: 'SwarmMaster', points: '11,200' },
-              ].map((player) => (
-                <div key={player.rank} className={`leaderboard-row rank-${player.rank}`}>
-                  <div className={`rank-badge rank-${player.rank}`}>{player.rank}</div>
-                  <span className="text-xs font-bold text-amber-100 flex-1">{player.name}</span>
-                  <span className="leaderboard-score">{player.points}</span>
+                { rank: 4,  name: 'QueenBee_Zara',  points: '10,980' },
+                { rank: 5,  name: 'DroneRider',      points: '10,540' },
+                { rank: 6,  name: 'HiveGuard99',     points: '10,210' },
+                { rank: 7,  name: 'NectarNinja',     points: '9,870' },
+                { rank: 8,  name: 'WaxWizard',       points: '9,450' },
+                { rank: 9,  name: 'PollenPro',       points: '9,120' },
+                { rank: 10, name: 'BuzzLord',        points: '8,890' },
+              ].map((player, i, arr) => (
+                <div key={player.rank} className={`flex items-center px-4 py-2 gap-3 ${i < arr.length - 1 ? 'border-b border-[#3a1804]/60' : ''}`}>
+                  <span className="text-xs font-bold text-amber-700/80 w-5 text-right shrink-0">#{player.rank}</span>
+                  <span className="text-xs text-amber-100/90 flex-1 truncate">{player.name}</span>
+                  <span className="text-xs font-bold text-amber-400">{player.points}</span>
                 </div>
               ))}
-              {/* Floating Streak Bee */}
-              <img
-                src="/assets/bee_wink.png"
-                alt="Streak Bee"
-                className="leaderboard-bee"
-                width={60}
-                height={60}
-              />
             </div>
           </section>
         </main>
