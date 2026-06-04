@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 200" width="480" height="200">
+  <defs>
+    <!-- LEAF SHAPE -->
+    <path id="leaf-shape" d="M 0 0 Q 10 -5 15 10 Q 10 25 -5 30 Q -2 15 0 0"
+          fill="#10b981"
+          stroke="#047857"
+          stroke-width="1"/>
+
+    <!-- LEAF WITH VEIN -->
+    <g id="leaf-with-vein">
+      <use href="#leaf-shape"/>
+      <path d="M 5 5 Q 5 10 5 25" stroke="#047857" stroke-width="0.8" fill="none"/>
+    </g>
+
+    <!-- FLOWER ACCENT -->
+    <g id="flower-accent">
+      <circle cx="0" cy="0" r="3" fill="#f59e0b"/>
+      <circle cx="0" cy="-6" r="2" fill="#fbbf24"/>
+      <circle cx="5" cy="-3" r="2" fill="#fbbf24"/>
+      <circle cx="5" cy="3" r="2" fill="#fbbf24"/>
+      <circle cx="0" cy="6" r="2" fill="#fbbf24"/>
+      <circle cx="-5" cy="3" r="2" fill="#fbbf24"/>
+      <circle cx="-5" cy="-3" r="2" fill="#fbbf24"/>
+    </g>
+
+    <!-- VINE/BRANCH -->
+    <path id="vine" d="M 0 0 Q 5 5 8 15 Q 10 25 5 35 Q 2 40 0 45"
+          stroke="#10b981"
+          stroke-width="1.5"
+          fill="none"
+          stroke-linecap="round"/>
+  </defs>
+
+  <!-- ROW 1: LEAF VARIATIONS -->
+
+  <!-- Leaf - 0° -->
+  <g transform="translate(30, 30)">
+    <title>Leaf - 0 degrees</title>
+    <use href="#leaf-with-vein"/>
+  </g>
+
+  <!-- Leaf - 45° -->
+  <g transform="translate(80, 30) rotate(45)">
+    <title>Leaf - 45 degrees</title>
+    <use href="#leaf-with-vein"/>
+  </g>
+
+  <!-- Leaf - 90° -->
+  <g transform="translate(130, 30) rotate(90)">
+    <title>Leaf - 90 degrees</title>
+    <use href="#leaf-with-vein"/>
+  </g>
+
+  <!-- Leaf - 135° -->
+  <g transform="translate(180, 30) rotate(135)">
+    <title>Leaf - 135 degrees</title>
+    <use href="#leaf-with-vein"/>
+  </g>
+
+  <!-- Leaf - 180° -->
+  <g transform="translate(230, 30) rotate(180)">
+    <title>Leaf - 180 degrees</title>
+    <use href="#leaf-with-vein"/>
+  </g>
+
+  <!-- Leaf - 270° -->
+  <g transform="translate(280, 30) rotate(270)">
+    <title>Leaf - 270 degrees</title>
+    <use href="#leaf-with-vein"/>
+  </g>
+
+  <!-- ROW 2: FLOWER ACCENTS -->
+
+  <!-- Single Flower -->
+  <g transform="translate(60, 120)">
+    <title>Flower Accent - Single</title>
+    <use href="#flower-accent"/>
+  </g>
+
+  <!-- Flower Pair -->
+  <g transform="translate(150, 120)">
+    <title>Flower Accent - Pair</title>
+    <use href="#flower-accent" transform="translate(-8, 0)"/>
+    <use href="#flower-accent" transform="translate(8, 0)"/>
+  </g>
+
+  <!-- Flower Cluster -->
+  <g transform="translate(270, 120)">
+    <title>Flower Accent - Cluster</title>
+    <use href="#flower-accent" transform="translate(0, 0)"/>
+    <use href="#flower-accent" transform="translate(-12, 8)"/>
+    <use href="#flower-accent" transform="translate(12, 8)"/>
+    <use href="#flower-accent" transform="translate(-8, -8)"/>
+    <use href="#flower-accent" transform="translate(8, -8)"/>
+  </g>
+
+  <!-- ROW 3: VINE/BRANCH DECORATIONS -->
+
+  <!-- Single Vine -->
+  <g transform="translate(40, 170)">
+    <title>Vine Branch - Single</title>
+    <use href="#vine"/>
+  </g>
+
+  <!-- Vine with Leaves -->
+  <g transform="translate(150, 170)">
+    <title>Vine Branch - With Leaves</title>
+    <use href="#vine"/>
+    <use href="#leaf-shape" transform="translate(2, 8) scale(0.8)"/>
+    <use href="#leaf-shape" transform="translate(5, 18) scale(0.8) rotate(20)"/>
+    <use href="#leaf-shape" transform="translate(2, 28) scale(0.8) rotate(40)"/>
+  </g>
+
+  <!-- Decorative Corner Element -->
+  <g transform="translate(300, 170)">
+    <title>Decorative Corner Element</title>
+    <use href="#vine" transform="rotate(45)"/>
+    <use href="#flower-accent" transform="translate(0, 20)"/>
+  </g>
+</svg>

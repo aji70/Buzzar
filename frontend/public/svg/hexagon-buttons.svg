@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 120" width="500" height="120">
+  <defs>
+    <!-- GRADIENTS -->
+    <linearGradient id="grad-default" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b5a3c;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#6b4423;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4a2f1a;stop-opacity:1" />
+    </linearGradient>
+
+    <linearGradient id="grad-hover" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#d97706;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#b45309;stop-opacity:1" />
+    </linearGradient>
+
+    <linearGradient id="grad-green" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#059669;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#047857;stop-opacity:1" />
+    </linearGradient>
+
+    <linearGradient id="grad-red" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#dc2626;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#b91c1c;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7f1d1d;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- FILTERS -->
+    <filter id="shadow-default">
+      <feDropShadow dx="0" dy="4" stdDeviation="3" flood-opacity="0.5"/>
+    </filter>
+
+    <filter id="glow-amber">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#f59e0b" flood-opacity="0.7"/>
+    </filter>
+
+    <filter id="glow-green">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#10b981" flood-opacity="0.8"/>
+    </filter>
+
+    <filter id="glow-red">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#dc2626" flood-opacity="0.8"/>
+    </filter>
+  </defs>
+
+  <!-- DEFAULT STATE -->
+  <g id="hex-default">
+    <polygon points="60,5 105,30 105,80 60,105 15,80 15,30"
+             fill="url(#grad-default)"
+             stroke="#4a2815"
+             stroke-width="3"
+             filter="url(#shadow-default)"/>
+    <text x="60" y="65" font-size="28" font-weight="900" text-anchor="middle" fill="#f59e0b" font-family="'Fredoka One', sans-serif">A</text>
+  </g>
+
+  <!-- HOVER STATE -->
+  <g id="hex-hover" transform="translate(120, 0)">
+    <polygon points="60,5 105,30 105,80 60,105 15,80 15,30"
+             fill="url(#grad-hover)"
+             stroke="#d97706"
+             stroke-width="3"
+             filter="url(#glow-amber)"/>
+    <text x="60" y="65" font-size="28" font-weight="900" text-anchor="middle" fill="#fff" font-family="'Fredoka One', sans-serif">B</text>
+  </g>
+
+  <!-- CORRECT STATE (GREEN) -->
+  <g id="hex-correct" transform="translate(240, 0)">
+    <polygon points="60,5 105,30 105,80 60,105 15,80 15,30"
+             fill="url(#grad-green)"
+             stroke="#059669"
+             stroke-width="3"
+             filter="url(#glow-green)"/>
+    <text x="60" y="65" font-size="32" font-weight="900" text-anchor="middle" fill="#fff" font-family="'Fredoka One', sans-serif">✓</text>
+  </g>
+
+  <!-- WRONG STATE (RED) -->
+  <g id="hex-wrong" transform="translate(360, 0)">
+    <polygon points="60,5 105,30 105,80 60,105 15,80 15,30"
+             fill="url(#grad-red)"
+             stroke="#b91c1c"
+             stroke-width="3"
+             filter="url(#glow-red)"/>
+    <text x="60" y="65" font-size="32" font-weight="900" text-anchor="middle" fill="#fff" font-family="'Fredoka One', sans-serif">✕</text>
+  </g>
+</svg>

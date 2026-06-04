@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 120" width="480" height="120">
+  <defs>
+    <filter id="cell-glow">
+      <feDropShadow dx="0" dy="0" stdDeviation="3" flood-color="#f59e0b" flood-opacity="0.8"/>
+    </filter>
+
+    <linearGradient id="honey-shine" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#fbbf24;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:0.4" />
+    </linearGradient>
+  </defs>
+
+  <!-- CELL 1: EMPTY (0%) -->
+  <g id="cell-empty">
+    <polygon points="60,10 100,35 100,85 60,110 20,85 20,35"
+             fill="none"
+             stroke="#8b5a3c"
+             stroke-width="2.5"/>
+    <text x="60" y="65" font-size="14" font-weight="bold" text-anchor="middle" fill="#d97706">0%</text>
+  </g>
+
+  <!-- CELL 2: 25% FILL -->
+  <g transform="translate(120, 0)">
+    <polygon points="60,10 100,35 100,85 60,110 20,85 20,35"
+             fill="#f59e0b"
+             stroke="#d97706"
+             stroke-width="2.5"/>
+    <ellipse cx="60" cy="35" rx="14" ry="10" fill="url(#honey-shine)" opacity="0.6"/>
+    <text x="60" y="65" font-size="14" font-weight="bold" text-anchor="middle" fill="#1a1008">25%</text>
+  </g>
+
+  <!-- CELL 3: 50% FILL -->
+  <g transform="translate(240, 0)">
+    <polygon points="60,10 100,35 100,85 60,110 20,85 20,35"
+             fill="#f59e0b"
+             stroke="#d97706"
+             stroke-width="2.5"/>
+    <!-- Shine effect -->
+    <ellipse cx="60" cy="40" rx="16" ry="20" fill="url(#honey-shine)" opacity="0.7"/>
+    <text x="60" y="65" font-size="14" font-weight="bold" text-anchor="middle" fill="#1a1008">50%</text>
+  </g>
+
+  <!-- CELL 4: 75% FILL -->
+  <g transform="translate(360, 0)">
+    <polygon points="60,10 100,35 100,85 60,110 20,85 20,35"
+             fill="#f59e0b"
+             stroke="#d97706"
+             stroke-width="2.5"/>
+    <!-- Shine effect -->
+    <ellipse cx="60" cy="45" rx="18" ry="28" fill="url(#honey-shine)" opacity="0.8"/>
+    <text x="60" y="65" font-size="14" font-weight="bold" text-anchor="middle" fill="#1a1008">75%</text>
+  </g>
+
+  <!-- CELL 5: 100% FILL WITH GLOW -->
+  <g>
+    <polygon points="420,10 460,35 460,85 420,110 380,85 380,35"
+             fill="#f59e0b"
+             stroke="#d97706"
+             stroke-width="2.5"
+             filter="url(#cell-glow)"/>
+    <!-- Full shine -->
+    <ellipse cx="420" cy="50" rx="20" ry="32" fill="url(#honey-shine)" opacity="0.9"/>
+    <circle cx="420" cy="60" r="5" fill="#fbbf24" opacity="0.6"/>
+    <text x="420" y="65" font-size="14" font-weight="bold" text-anchor="middle" fill="#1a1008">100%</text>
+  </g>
+</svg>

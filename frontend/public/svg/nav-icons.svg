@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 96" width="384" height="96">
+  <defs>
+    <style>
+      .nav-icon {
+        stroke: #f59e0b;
+        stroke-width: 2.5;
+        fill: none;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+      .nav-icon-fill {
+        fill: #f59e0b;
+      }
+    </style>
+  </defs>
+
+  <!-- HOME -->
+  <g transform="translate(6, 6)">
+    <rect x="10" y="35" width="70" height="50" class="nav-icon" rx="4"/>
+    <polygon points="42,10 82,35 82,85 10,85 10,35" class="nav-icon"/>
+    <line x1="42" y1="35" x2="42" y2="75" class="nav-icon"/>
+  </g>
+
+  <!-- PLAY -->
+  <g transform="translate(54, 6)">
+    <circle cx="42" cy="48" r="40" class="nav-icon"/>
+    <polygon points="30,28 30,68 65,48" class="nav-icon-fill"/>
+  </g>
+
+  <!-- PROFILE -->
+  <g transform="translate(102, 6)">
+    <circle cx="42" cy="28" r="16" class="nav-icon"/>
+    <path d="M 18 60 Q 18 45 42 45 Q 66 45 66 60 L 66 75 Q 66 75 42 75 Q 18 75 18 75 Z" class="nav-icon"/>
+  </g>
+
+  <!-- SHOP -->
+  <g transform="translate(150, 6)">
+    <path d="M 18 28 L 28 8 L 56 8 L 66 28 Z" class="nav-icon"/>
+    <rect x="14" y="28" width="56" height="45" class="nav-icon" rx="3"/>
+    <line x1="28" y1="28" x2="28" y2="73" class="nav-icon"/>
+    <line x1="42" y1="28" x2="42" y2="73" class="nav-icon"/>
+    <line x1="56" y1="28" x2="56" y2="73" class="nav-icon"/>
+  </g>
+
+  <!-- LEADERBOARD -->
+  <g transform="translate(198, 6)">
+    <rect x="12" y="48" width="16" height="27" class="nav-icon-fill"/>
+    <rect x="32" y="33" width="16" height="42" class="nav-icon-fill"/>
+    <rect x="52" y="18" width="16" height="57" class="nav-icon-fill"/>
+    <line x1="8" y1="76" x2="72" y2="76" class="nav-icon"/>
+  </g>
+
+  <!-- SETTINGS -->
+  <g transform="translate(246, 6)">
+    <circle cx="42" cy="48" r="13" class="nav-icon"/>
+    <g class="nav-icon">
+      <line x1="42" y1="10" x2="42" y2="24"/>
+      <line x1="42" y1="72" x2="42" y2="86"/>
+      <line x1="10" y1="48" x2="24" y2="48"/>
+      <line x1="60" y1="48" x2="74" y2="48"/>
+      <line x1="18" y1="18" x2="28" y2="28"/>
+      <line x1="56" y1="68" x2="66" y2="78"/>
+      <line x1="66" y1="18" x2="56" y2="28"/>
+      <line x1="28" y1="68" x2="18" y2="78"/>
+    </g>
+  </g>
+
+  <!-- MENU/HAMBURGER -->
+  <g transform="translate(294, 6)">
+    <line x1="12" y1="22" x2="72" y2="22" class="nav-icon"/>
+    <line x1="12" y1="48" x2="72" y2="48" class="nav-icon"/>
+    <line x1="12" y1="74" x2="72" y2="74" class="nav-icon"/>
+  </g>
+
+  <!-- CLOSE/X -->
+  <g transform="translate(342, 6)">
+    <line x1="18" y1="18" x2="66" y2="78" class="nav-icon"/>
+    <line x1="66" y1="18" x2="18" y2="78" class="nav-icon"/>
+  </g>
+</svg>
