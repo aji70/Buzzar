@@ -57,12 +57,16 @@ All images should:
 
 ## Current Status
 
-⚠️ **Assets are referenced in the code but not yet placed in this directory.**
+✅ **65 PNG assets** from the BUZZQUIZ UI kit (`bee1.png`) are in this folder.
 
-To complete the visual upgrade:
-1. Place the three bee PNG files here
-2. Verify they display correctly at 2x browser zoom
-3. Test on mobile (560px viewport width)
+The home page uses them via `lib/game-assets.ts` and `components/GameAsset.tsx`.
+
+To re-extract all assets from `bee1.png` (repo root):
+```bash
+cd frontend
+python3 -m venv .venv && .venv/bin/pip install pillow
+.venv/bin/python scripts/extract_all_assets.py
+```
 
 ## Attribution
 

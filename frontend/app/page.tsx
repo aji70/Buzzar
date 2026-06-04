@@ -25,7 +25,16 @@ export default function Home() {
         <header className="header-nav rounded-b-2xl mx-2 mt-2 px-4 py-3 flex justify-between items-center sticky top-0 z-50">
           {/* Logo & Mascot */}
           <div className="flex items-center gap-2">
-            <span className="text-3xl animate-float">🐝</span>
+            <img
+              src="/assets/bee_happy_bucket.png"
+              alt="Buzzar bee"
+              style={{
+                height: '36px',
+                width: 'auto',
+                objectFit: 'contain',
+                filter: 'drop-shadow(0 2px 4px rgba(245,158,11,0.3))',
+              }}
+            />
             <h1 className="header-logo text-2xl" style={{ fontSize: '1.5rem' }}>
               BUZZAR
             </h1>
@@ -222,14 +231,6 @@ export default function Home() {
                 Join thousands of players competing in real-time quiz battles. Answer questions correctly, climb the ranks from Worker Bee to Hive Master, and dominate the leaderboards!
               </p>
             </div>
-            {/* Floating Bee */}
-            <img
-              src="/assets/bee_happy_bucket.png"
-              alt="Happy Bee"
-              className="hero-bee"
-              width={110}
-              height={110}
-            />
           </section>
 
           {/* QUICK STATS */}
@@ -264,7 +265,9 @@ export default function Home() {
                 <h4 className="game-card-title text-amber-300">HIVE MASTER</h4>
                 <p className="game-card-desc">Solo Progression Mode</p>
               </div>
-              <button className="btn-pill">PLAY</button>
+              <Link href="/hive-master/quiz" className="btn-pill game-card-action">
+                PLAY
+              </Link>
             </div>
 
             {/* HIVE ON FIRE */}
