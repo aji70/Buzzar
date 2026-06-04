@@ -1,4 +1,6 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Buzzar Frontend
+
+Next.js app for **Buzzar** — the gamified learning platform where knowledge creates a buzz.
 
 ## Getting Started
 
