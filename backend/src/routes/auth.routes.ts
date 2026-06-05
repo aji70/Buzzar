@@ -22,7 +22,16 @@ export async function authRoutes(fastify: FastifyInstance) {
         200: {
           type: 'object',
           properties: {
-            user: { type: 'object' },
+            user: {
+              type: 'object',
+              properties: {
+                id: { type: 'string' },
+                email: { type: 'string' },
+                name: { type: 'string', nullable: true },
+                createdAt: { type: 'string' },
+                updatedAt: { type: 'string' },
+              },
+            },
             token: { type: 'string' },
           },
         },
@@ -53,7 +62,16 @@ export async function authRoutes(fastify: FastifyInstance) {
         200: {
           type: 'object',
           properties: {
-            user: { type: 'object' },
+            user: {
+              type: 'object',
+              properties: {
+                id: { type: 'string' },
+                email: { type: 'string' },
+                name: { type: 'string', nullable: true },
+                createdAt: { type: 'string' },
+                updatedAt: { type: 'string' },
+              },
+            },
             token: { type: 'string' },
           },
         },
@@ -95,7 +113,16 @@ export async function authRoutes(fastify: FastifyInstance) {
       tags: ['Auth'],
       security: [{ bearerAuth: [] }],
       response: {
-        200: { type: 'object' },
+        200: {
+          type: 'object',
+          properties: {
+            id: { type: 'string' },
+            email: { type: 'string' },
+            name: { type: 'string', nullable: true },
+            createdAt: { type: 'string' },
+            updatedAt: { type: 'string' },
+          },
+        },
       },
     },
   }, async (request, reply) => {
@@ -121,7 +148,16 @@ export async function authRoutes(fastify: FastifyInstance) {
         },
       },
       response: {
-        200: { type: 'object' },
+        200: {
+          type: 'object',
+          properties: {
+            id: { type: 'string' },
+            email: { type: 'string' },
+            name: { type: 'string', nullable: true },
+            createdAt: { type: 'string' },
+            updatedAt: { type: 'string' },
+          },
+        },
       },
     },
   }, async (request, reply) => {

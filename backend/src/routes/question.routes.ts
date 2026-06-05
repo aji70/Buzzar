@@ -1,10 +1,61 @@
 import { FastifyInstance } from 'fastify';
 import { QuestionService, CreateQuestionDto } from '../services/question.service';
+import { LLMService, GenerateQuestionsOptions } from '../services/llm.service';
 import { authMiddleware } from '../middleware/auth';
-import { QuestionType } from '../entities/Question';
+import { QuestionType, QuestionDifficulty } from '../entities/Question';
 
 export async function questionRoutes(fastify: FastifyInstance) {
   const questionService = new QuestionService();
+  const llmService = new LLMService();
+
+  fastify.post<{ Body: GenerateQuestionsOptions }>('/questions/generate', {
+    preHandler: authMiddleware,
+    schema: {
+      tags: ['Questions'],
+      security: [{ bearerAuth: [] }],
+      body: {
+        type: 'object',
+        required: ['category_id', 'number_of_questions'],
+        properties: {
+          category_id: { type: 'string' },
+          number_of_questions: { type: 'integer', minimum: 1, maximum: 50 },
+          type: { type: 'string', enum: [...Object.values(QuestionType), null], nullable: true },
+          difficulty: { type: 'string', enum: [...Object.values(QuestionDifficulty), null], nullable: true },
+        },
+      },
+      response: {
+        200: {
+          type: 'object',
+          properties: {
+            count: { type: 'integer' },
+            questions: {
+              type: 'array',
+              items: {
+                type: 'object',
+                properties: {
+                  type: { type: 'string' },
+                  question: { type: 'string' },
+                  answer_options: { type: 'array', items: { type: 'string' } },
+                  answer: { type: 'string' },
+                  hint: { type: 'string' },
+                  image_url: { type: 'string' },
+                  difficulty: { type: 'string' },
+                  points: { type: 'integer' },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+  }, async (request, reply) => {
+    try {
+      const questions = await llmService.generateQuestions(request.body);
+      reply.send({ count: questions.length, questions });
+    } catch (error: any) {
+      reply.code(400).send({ error: error.message });
+    }
+  });
 
   fastify.post<{ Body: CreateQuestionDto }>('/questions', {
     preHandler: authMiddleware,

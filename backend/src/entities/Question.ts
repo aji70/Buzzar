@@ -7,6 +7,12 @@ export enum QuestionType {
   TRUE_OR_FALSE = 'true_or_false',
 }
 
+export enum QuestionDifficulty {
+  EASY = 'easy',
+  MEDIUM = 'medium',
+  HARD = 'hard',
+}
+
 @Entity('questions')
 export class Question {
   @PrimaryGeneratedColumn('uuid')
@@ -29,6 +35,12 @@ export class Question {
 
   @Column({ type: 'text', nullable: true })
   hint!: string | null;
+
+  @Column({ type: 'enum', enum: QuestionDifficulty, nullable: true })
+  difficulty!: QuestionDifficulty | null;
+
+  @Column({ type: 'int', default: 1 })
+  points!: number;
 
   @Column({ type: 'uuid', nullable: true })
   categoryId!: string | null;

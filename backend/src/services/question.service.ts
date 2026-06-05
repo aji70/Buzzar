@@ -1,5 +1,5 @@
 import { AppDataSource } from '../config/database';
-import { Question, QuestionType } from '../entities/Question';
+import { Question, QuestionType, QuestionDifficulty } from '../entities/Question';
 
 export interface CreateQuestionDto {
   type: QuestionType;
@@ -8,6 +8,8 @@ export interface CreateQuestionDto {
   answerOptions?: Record<string, string>;
   imageUrl?: string;
   hint?: string;
+  difficulty?: QuestionDifficulty;
+  points?: number;
   categoryId?: string;
 }
 
